@@ -11,9 +11,8 @@ void setMainMenuButtons(Button buttons[], int buttonNumber, RenderWindow & windo
 	buttons[0].setActive(false);
 	buttons[0].setButtonText("Zombie Defence", 2);
 	buttons[1].setButtonText("Nowa Gra", 1);
-	buttons[2].setButtonText("Wczytaj", 1);
-	buttons[3].setButtonText("Ustawienia", 1);
-	buttons[4].setButtonText("Wyjscie", 1);
+	buttons[2].setButtonText("Ustawienia", 1);
+	buttons[3].setButtonText("Wyjscie", 1);
 	for (int i = 0; i < buttonNumber; i++)
 	{
 		buttons[i].setTextType("files/font.ttf");
@@ -24,7 +23,7 @@ void setMainMenuButtons(Button buttons[], int buttonNumber, RenderWindow & windo
 }
 int runMainMenu(RenderWindow & window)
 {
-	Menu <5> mainMenu;
+	Menu <4> mainMenu;
 	setMainMenuButtons(mainMenu.buttons, mainMenu.getButtonNumber(), window);
 	return mainMenu.runMenu(window);
 }
@@ -176,7 +175,7 @@ void runMenu(RenderWindow & window, GameType & gameType)
 {
 	int mainChoice = -1;			// wybor w menu g³ównym
 
-	while (mainChoice != 4)
+	while (mainChoice != 3)
 	{
 		mainChoice = runMainMenu(window);
 		if (mainChoice == 1)
@@ -184,12 +183,12 @@ void runMenu(RenderWindow & window, GameType & gameType)
 			gameTypeMenu(window, gameType);
 			if (gameType != 0) break;
 		}
-		else if (mainChoice == 3)
+		else if (mainChoice == 2)
 		{
 			runSettingsMenu(window);
 		}
 	}
-	if (mainChoice == 4) window.close();
+	if (mainChoice == 3) window.close();
 }
 
 int main()
