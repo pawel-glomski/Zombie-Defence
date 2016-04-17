@@ -45,7 +45,7 @@ void setGameTypeMenuButtons(Button buttons[], int buttonNumber, RenderWindow & w
 }
 void gameTypeMenu(RenderWindow & window, GameType & gameType)
 {
-	int gameTypeChoice = -1;		// wybór w wyborze trybu gry
+	int gameTypeChoice = -1;		// wybÃ³r w wyborze trybu gry
 	Menu <3> gameTypeMenu;
 	setGameTypeMenuButtons(gameTypeMenu.buttons, gameTypeMenu.getButtonNumber(), window);
 
@@ -142,7 +142,7 @@ void runSettingsMenu(RenderWindow & window)
 
 	setSettingsButtons(settingsMenu.buttons, settingsMenu.getButtonNumber(), window, settingsMenu.isFullScreen);
 
-	// osbluga wyborów
+	// osbluga wyborÃ³w
 	while (settingsChoice != 4)
 	{
 
@@ -174,7 +174,7 @@ void runSettingsMenu(RenderWindow & window)
 
 void runMenu(RenderWindow & window, GameType & gameType)
 {
-	int mainChoice = -1;			// wybor w menu g³ównym
+	int mainChoice = -1;			// wybor w menu gÂ³Ã³wnym
 
 	while (mainChoice != 4)
 	{
