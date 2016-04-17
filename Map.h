@@ -31,7 +31,6 @@ void Map<mapXsize, mapYsize>::setMap(RenderWindow & window)								// setMap
 {
 	sprite.setOrigin(blockTexture[0].getSize().x/2.0,blockTexture[0].getSize().y/2.0);
 	sprite.setScale(window.getSize().y/ visionRange /blockTexture[0].getSize().x, window.getSize().y/ visionRange / blockTexture[0].getSize().y);	
-	map[mapYsize / 2][mapXsize / 2].setBlockTexture(wall);
 
 	blockSize = window.getSize().y / visionRange;
 	xNumber = window.getSize().x / blockSize;	// ilosc blokow mieszczacych sie na ekranie na osi X
